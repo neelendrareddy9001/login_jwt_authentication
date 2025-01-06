@@ -2,6 +2,8 @@ import express from "express";
 import { conn } from "./connection/db.js";
 import { config } from "dotenv";
 
+import userRoutes from "./routes/userRoutes.js";
+
 const app = express();
 config({ path: "./config.env" });
 
@@ -12,3 +14,5 @@ app.listen(PORT, () => {
 });
 
 conn();
+
+app.use("/api/v1/user", userRoutes);
