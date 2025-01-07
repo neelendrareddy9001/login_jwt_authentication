@@ -8,3 +8,5 @@ const userScheema = new mongoose.Schema({
 });
 
 export const User = mongoose.model("Users", userScheema);
+
+export default User;
