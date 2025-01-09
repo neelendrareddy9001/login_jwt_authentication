@@ -35,5 +35,8 @@ export const signup = async (req, res) => {
 export const signin = async (req, res) => {
   try {
     const { email, password } = req.body;
+    if (password !== hashedPassword) {
+      return res.send("inavlid credentials");
+    }
   } catch (error) {}
 };
