@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import { FiMenu } from "react-icons/fi";
+import { IoClose } from "react-icons/io5";
 
 const navlinks = [
   {
@@ -29,17 +31,35 @@ const navlinks = [
 ];
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleMenu = () => {
+    setIsOpen(true);
+  };
   return (
-    <div className=" bg-black lg:w-[55%] mx-auto py-4 px-10 border mt-4 rounded-full w-[90%] md:w-[75%] text-white z-[101]">
+    <nav className=" bg-black lg:w-[55%] mx-auto py-4 px-10 border mt-4 rounded-full w-[90%] md:w-[75%] text-white z-[101]">
       <div className="flex items-center justify-between">
-        <a href="#">Navbar</a>
-        <ul className="items-center flex space-x-5">
+        <a href="#" className="font-bold text-xl">
+          Navbar
+        </a>
+        <ul className="hidden lg:space-x-5 lg:flex">
           {navlinks.map((item) => (
-            <li key={item.id}>{item.title}</li>
+            <li className="cursor-pointer" key={item.id}>
+              {item.title}
+            </li>
           ))}
         </ul>
+
+        {!isOpen ? (
+          <FiMenu
+            className="block lg:hidden cursor-pointer"
+            size={28}
+            onClick={handleMenu}
+          />
+        ) : (
+          <IoClose className="block lg:hidden cursor-pointer" size={28} />
+        )}
       </div>
-    </div>
+    </nav>
   );
 };
 

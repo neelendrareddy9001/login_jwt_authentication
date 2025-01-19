@@ -3,6 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    z-index: 100;
+
+
+nav {
+    z-index: 10000;
 }
