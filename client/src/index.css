@@ -3,8 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-nav {
-    z-index: 10000;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+/* nav {
+    z-index: 10000;
+} */

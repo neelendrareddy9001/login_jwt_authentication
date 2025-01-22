@@ -40,16 +40,16 @@ const Navbar = () => {
     setIsOpen(!true);
   };
   return (
-    <nav className=" bg-black lg:w-[55%] mx-auto py-4 px-10 border mt-4 rounded-full w-[90%] md:w-[75%] text-white z-[101]">
+    <nav className=" bg-black lg:w-[55%] mx-auto py-4 px-10 rounded-full w-[90%] md:w-[75%] text-white z-[101]">
       <div className="flex items-center justify-between">
         <a href="#" className="font-bold text-xl">
           Navbar
         </a>
         <ul className="hidden lg:space-x-5 lg:flex">
           {navlinks.map((item) => (
-            <li className="cursor-pointer" key={item.id}>
+            <Link className="cursor-pointer" key={item.id}>
               {item.title}
-            </li>
+            </Link>
           ))}
         </ul>
 
