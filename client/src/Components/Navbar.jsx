@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const navlinks = [
   {
@@ -35,6 +36,9 @@ const Navbar = () => {
   const handleMenu = () => {
     setIsOpen(true);
   };
+  const handleCloseMenu = () => {
+    setIsOpen(!true);
+  };
   return (
     <nav className=" bg-black lg:w-[55%] mx-auto py-4 px-10 border mt-4 rounded-full w-[90%] md:w-[75%] text-white z-[101]">
       <div className="flex items-center justify-between">
@@ -56,7 +60,11 @@ const Navbar = () => {
             onClick={handleMenu}
           />
         ) : (
-          <IoClose className="block lg:hidden cursor-pointer" size={28} />
+          <IoClose
+            className="block lg:hidden cursor-pointer"
+            size={28}
+            onClick={handleCloseMenu}
+          />
         )}
       </div>
     </nav>
