@@ -9,6 +9,11 @@
     box-sizing: border-box;
 }
 
+.section-container {
+    width: full;
+    padding: 0px 8%;
+}
+
 /* nav {
     z-index: 10000;
 } */
