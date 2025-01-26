@@ -4,11 +4,14 @@ import "./index.css";
 import App from "./App.jsx";
 
 import { BrowserRouter } from "react-router-dom";
+import { NavigationContextProvider } from "./context/NavContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-      <App />
+      <NavigationContextProvider>
+        <App />
+      </NavigationContextProvider>
     </BrowserRouter>
   </StrictMode>
 );

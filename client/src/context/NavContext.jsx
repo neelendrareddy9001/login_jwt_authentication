@@ -1,8 +1,8 @@
 import { createContext, useCallback, useState } from "react";
 
-const NavigateContect = createContext();
+export const NavigateContect = createContext();
 
-const NavigationContextProvider = ({ children }) => {
+export const NavigationContextProvider = ({ children }) => {
   const [pages, setPages] = useState([]);
 
   const addPages = useCallback((page) => {

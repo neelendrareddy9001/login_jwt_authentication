@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { NavigateContect } from "../context/NavContext";
 
 const navlinks = [
   {
@@ -32,6 +33,7 @@ const navlinks = [
 ];
 
 const Navbar = () => {
+  const { pages } = useContext(NavigateContect);
   const [isOpen, setIsOpen] = useState(false);
   const handleMenu = () => {
     setIsOpen(true);
