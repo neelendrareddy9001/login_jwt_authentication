@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { NavigateContect } from "../context/NavContext";
 
 const navlinks = [
@@ -44,9 +44,9 @@ const Navbar = () => {
   return (
     <nav className=" bg-black lg:w-[55%] mx-auto py-4 px-10 rounded-full w-[90%] md:w-[75%] text-white z-[101]">
       <div className="flex items-center justify-between">
-        <a href="" className="font-bold text-xl">
+        <NavLink to="/" href="" className="font-bold text-xl">
           Navbar
-        </a>
+        </NavLink>
         <div className="hidden lg:space-x-5 lg:flex">
           {navlinks.map((item) => (
             <Link className="cursor-pointer" to={item.href} key={item.id}>
