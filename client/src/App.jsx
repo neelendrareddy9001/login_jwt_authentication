@@ -18,7 +18,6 @@ const App = () => {
   return (
     <>
       <ThemeContext.Provider value={(theme, setTheme)}>
-        <Home />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

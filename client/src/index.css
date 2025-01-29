@@ -9,10 +9,16 @@
     box-sizing: border-box;
 }
 
-.section-container {
-    width: full;
-    padding: 0px 8%;
+@layer components {
+    .section-container {
+        @apply w-full px-[8%] py-[1.25rem]
+    }
+    h2 {
+        @apply text-center sm:text-xl md:text-3xl font-bold  uppercase
+    }
 }
+
+
 
 /* nav {
     z-index: 10000;
