@@ -72,7 +72,7 @@ const Navbar = () => {
         </div>
       </nav>
       {isOpen && (
-        <div className=" bg-black w-[90%] md:w-[75%] lg:w-[55%] mx-auto mt-3 rounded-xl">
+        <div className=" bg-black w-[90%] md:w-[75%] lg:w-[55%] mx-auto mt-3 rounded-xl lg:hidden">
           <div className="flex text-white flex-col gap-8 text-center p-[2rem]">
             {navlinks.map((item) => (
               <Link
