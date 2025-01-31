@@ -16,6 +16,9 @@
     h2 {
         @apply text-center sm:text-xl md:text-3xl font-bold  uppercase
     }
+    .links {
+        @apply hover:bg-yellow-400 p-4 rounded-xl
+    }
 }
 
 

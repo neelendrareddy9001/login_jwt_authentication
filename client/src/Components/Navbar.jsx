@@ -42,34 +42,51 @@ const Navbar = () => {
     setIsOpen(!true);
   };
   return (
-    <nav className=" bg-black lg:w-[55%] mx-auto py-4 px-10 rounded-full w-[90%] md:w-[75%] text-white z-[101]">
-      <div className="flex items-center justify-between">
-        <NavLink to="/" href="" className="font-bold text-xl">
-          Navbar
-        </NavLink>
-        <div className="hidden lg:space-x-5 lg:flex">
-          {navlinks.map((item) => (
-            <Link className="cursor-pointer" to={item.href} key={item.id}>
-              {item.title}
-            </Link>
-          ))}
-        </div>
+    <>
+      <nav className=" bg-black lg:w-[55%] mx-auto py-4 px-10 rounded-full w-[90%] md:w-[75%] text-white z-[101]">
+        <div className="flex items-center justify-between">
+          <NavLink to="/" href="" className="font-bold text-xl">
+            Navbar
+          </NavLink>
+          <div className="hidden lg:space-x-5 lg:flex">
+            {navlinks.map((item) => (
+              <Link className="cursor-pointer" to={item.href} key={item.id}>
+                {item.title}
+              </Link>
+            ))}
+          </div>
 
-        {!isOpen ? (
-          <FiMenu
-            className="block lg:hidden cursor-pointer"
-            size={28}
-            onClick={handleMenu}
-          />
-        ) : (
-          <IoClose
-            className="block lg:hidden cursor-pointer"
-            size={28}
-            onClick={handleCloseMenu}
-          />
-        )}
-      </div>
-    </nav>
+          {!isOpen ? (
+            <FiMenu
+              className="block lg:hidden cursor-pointer"
+              size={28}
+              onClick={handleMenu}
+            />
+          ) : (
+            <IoClose
+              className="block lg:hidden cursor-pointer"
+              size={28}
+              onClick={handleCloseMenu}
+            />
+          )}
+        </div>
+      </nav>
+      {isOpen && (
+        <div className=" bg-black w-[90%] md:w-[75%] lg:w-[55%] mx-auto mt-3 rounded-xl">
+          <div className="flex text-white flex-col gap-8 text-center p-[2rem]">
+            {navlinks.map((item) => (
+              <Link
+                className="cursor-pointer links"
+                to={item.href}
+                key={item.id}
+              >
+                {item.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
