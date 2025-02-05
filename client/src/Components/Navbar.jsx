@@ -43,7 +43,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav className=" bg-black lg:w-[55%] mx-auto py-4 px-10 rounded-full w-[90%] md:w-[75%] text-white z-[101]">
+      <nav className=" bg-black lg:w-[55%] mx-auto py-4 px-8 rounded-full w-[90%] md:w-[75%] text-white z-[101] sm:w-[95%]">
         <div className="flex items-center justify-between">
           <NavLink to="/" href="" className="font-bold text-xl">
             Navbar
