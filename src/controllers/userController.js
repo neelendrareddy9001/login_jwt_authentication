@@ -38,5 +38,14 @@ export const signin = async (req, res) => {
     if (password !== hashedPassword) {
       return res.send("inavlid credentials");
     }
-  } catch (error) {}
+    const user = await User.findOne({ email });
+    if (!user) {
+      return new Error("Invalid email or password", 400);
+    }
+  } catch (error) {
+    res.status(404).json({
+      success: false,
+      message: "invalid valid email or password",
+    });
+  }
 };
