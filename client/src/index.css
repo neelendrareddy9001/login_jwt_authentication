@@ -19,6 +19,9 @@
     .links {
         @apply hover:bg-yellow-400 p-4 rounded-xl
     }
+    .back_main{
+        @apply absolute right-3 bottom-3 w-12 h-12 text-center rounded-full bg-black text-white
+    }
 }
 
 
