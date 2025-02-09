@@ -11,7 +11,7 @@
 
 @layer components {
     .section-container {
-        @apply w-full px-[8%] py-[1.25rem]
+        @apply w-full px-[8%] py-[0.75rem]
     }
     h2 {
         @apply text-center sm:text-xl md:text-3xl font-bold  uppercase
