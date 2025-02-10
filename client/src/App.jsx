@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import "./App.css";
 // import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
-import { Route, Routes } from "react-router-dom";
+import { Route, Router, Routes } from "react-router-dom";
 import About from "./pages/About";
 import Cv from "./pages/Cv";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 
 import { ThemeContext, themes } from "./context/themeContext";
+import Navbar from "./Components/Navbar";
 
 const App = () => {
   const [theme, setTheme] = useState(themes.light);

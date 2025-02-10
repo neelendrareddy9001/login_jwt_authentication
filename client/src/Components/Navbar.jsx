@@ -4,6 +4,9 @@ import { IoClose } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
 import { NavigateContect } from "../context/NavContext";
 
+//framer motion
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+
 const navlinks = [
   {
     id: 1,
