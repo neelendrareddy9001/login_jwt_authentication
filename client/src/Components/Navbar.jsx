@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
@@ -38,15 +38,36 @@ const navlinks = [
 const Navbar = () => {
   const { pages } = useContext(NavigateContect);
   const [isOpen, setIsOpen] = useState(false);
+  const [hidden, setIsHidden] = useState(false);
+
+  const { scrollY } = useScroll();
+
   const handleMenu = () => {
     setIsOpen(true);
   };
   const handleCloseMenu = () => {
     setIsOpen(!true);
   };
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+    if (latest > previous && latest > 150) {
+      setIsHidden(true);
+    } else {
+      setIsHidden(false);
+    }
+  });
   return (
     <>
-      <nav className=" bg-black lg:w-[55%] mx-auto py-4 px-8 rounded-full w-[90%] md:w-[75%] text-white z-[101] sm:w-[95%]">
+      <motion.nav
+        variants={{
+          hidden: { y: "-100%" },
+          visible: { y: "0" },
+        }}
+        animate={hidden ? "hidden" : "visible"}
+        transition={{ duration: 0.35, ease: "easeInOut" }}
+        className=" bg-black lg:w-[55%] mx-auto py-4 px-8 rounded-full w-[90%] md:w-[75%] text-white z-[101] sm:w-[95%]"
+      >
         <div className="flex items-center justify-between">
           <NavLink to="/" href="" className="font-bold text-xl">
             Navbar
@@ -73,9 +94,9 @@ const Navbar = () => {
             />
           )}
         </div>
-      </nav>
+      </motion.nav>
       {isOpen && (
-        <div className=" bg-black w-[90%] md:w-[75%] lg:w-[55%] mx-auto mt-3 rounded-xl lg:hidden shadow-xl duration-150">
+        <div className=" bg-black  w-[90%] md:w-[50%] fixed top-[60px] right-28 lg:w-[55%] mx-auto mt-3 rounded-xl lg:hidden shadow-xl duration-150">
           <div className="flex text-white flex-col gap-8 text-center p-[2rem]">
             {navlinks.map((item) => (
               <Link
