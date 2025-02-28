@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "nodemon ./src/app.js",
+    "token": "node src/utils/generateToken.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

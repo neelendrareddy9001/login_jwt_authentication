@@ -17,7 +17,7 @@ export const verifyToken = (req, res) => {
 
     try {
       const decode = jwt.verify(token, process.env.JWT_SECRET);
-      req.name = decode;
+      req.user = decode;
       NavigationContextProvider();
     } catch (error) {
       res.status(400).json({ status: 400, message: "Token is not valid" });
