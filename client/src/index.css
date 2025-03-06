@@ -29,3 +29,11 @@
 /* nav {
     z-index: 10000;
 } */
+
+/* Contact */
+
+.section-container h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
