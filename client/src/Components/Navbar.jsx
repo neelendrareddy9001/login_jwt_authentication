@@ -72,17 +72,20 @@ const Navbar = () => {
           <NavLink to="/" href="" className="font-bold text-xl">
             Navbar
           </NavLink>
-          <div className="hidden lg:space-x-5 lg:flex">
+          <div className="hidden lgg:flex gap-8 items-center">
             {navlinks.map((item) => (
               <Link className="cursor-pointer" to={item.href} key={item.id}>
                 {item.title}
               </Link>
             ))}
+            <button className="px-8 py-3 bg-white rounded-full text-black font-semibold">
+              Rgister
+            </button>
           </div>
 
           {!isOpen ? (
             <FiMenu
-              className="block lg:hidden cursor-pointer"
+              className="block mdd:hidden cursor-pointer"
               size={28}
               onClick={handleMenu}
             />
