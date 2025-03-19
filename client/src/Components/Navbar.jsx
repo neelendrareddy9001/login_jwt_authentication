@@ -74,8 +74,12 @@ const Navbar = () => {
           </NavLink>
           <div className="hidden lgg:flex gap-8 items-center">
             {navlinks.map((item) => (
-              <Link className="cursor-pointer" to={item.href} key={item.id}>
-                {item.title}
+              <Link
+                className="cursor-pointer navlink"
+                to={item.href}
+                key={item.id}
+              >
+                <a> {item.title}</a>
               </Link>
             ))}
             <button className="px-8 py-3 bg-white rounded-full text-black font-semibold">
