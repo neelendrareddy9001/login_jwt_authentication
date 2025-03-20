@@ -66,7 +66,7 @@ const Navbar = () => {
         }}
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.35, ease: "easeInOut" }}
-        className=" bg-black lg:w-[55%] mx-auto py-4 px-8 rounded-full w-[90%] md:w-[75%] text-white z-[101] sm:w-[95%]"
+        className=" bg-black lg:w-[55%] mx-auto py-4 px-8 w-[100%] md:w-[75%] text-white z-[101] sm:w-[95%]"
       >
         <div className="flex items-center justify-between">
           <NavLink to="/" href="" className="font-bold text-xl">
@@ -103,7 +103,7 @@ const Navbar = () => {
         </div>
       </motion.nav>
       {isOpen && (
-        <div className=" bg-black  w-[90%] md:w-[50%] fixed top-[60px] right-28 lg:w-[55%] mx-auto mt-3 rounded-xl lg:hidden shadow-xl duration-150">
+        <div className=" bg-black  w-[60%] md:w-[50%] fixed top-[48px] left-[22%] lg:w-[55%] mx-auto rounded-xl mt-20 lg:hidden shadow-xl duration-150">
           <div className="flex text-white flex-col gap-8 text-center p-[2rem]">
             {navlinks.map((item) => (
               <Link

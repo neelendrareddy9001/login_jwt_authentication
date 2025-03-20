@@ -1,7 +1,12 @@
 import React from "react";
+import Navbar from "../Components/Navbar";
 
 const Cv = () => {
-  return <div>Cv</div>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 };
 
 export default Cv;
