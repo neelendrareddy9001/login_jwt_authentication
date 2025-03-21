@@ -6,27 +6,28 @@ import { NavigateContect } from "../context/NavContext";
 
 //framer motion
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import Modlbutton from "../utils/Modlbutton";
 
 const navlinks = [
   {
     id: 1,
     href: "/",
-    title: "HOME",
+    title: "Home",
   },
   {
     id: 2,
     href: "/about",
-    title: "ABOUT",
+    title: "About",
   },
   {
     id: 3,
-    href: "/cv",
-    title: "CV",
+    href: "/tesimonials",
+    title: "Testimonials",
   },
   {
     id: 4,
-    href: "/projects",
-    title: "PROJECTS",
+    href: "/services",
+    title: "Our Services",
   },
   {
     id: 5,
@@ -36,6 +37,7 @@ const navlinks = [
 ];
 
 const Navbar = () => {
+  const [modal, setModal] = useState(true);
   const { pages } = useContext(NavigateContect);
   const [isOpen, setIsOpen] = useState(false);
   const [hidden, setIsHidden] = useState(false);
@@ -47,6 +49,10 @@ const Navbar = () => {
   };
   const handleCloseMenu = () => {
     setIsOpen(!true);
+  };
+
+  const modalOpen = () => {
+    setModal(!modal);
   };
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -66,7 +72,7 @@ const Navbar = () => {
         }}
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.35, ease: "easeInOut" }}
-        className=" bg-black lg:w-[55%] mx-auto py-4 px-8 w-[100%] md:w-[75%] text-white z-[101] sm:w-[95%]"
+        className=" bg-black lg:w-[55%] mx-auto py-4 px-8 w-[100%] md:w-[75%] text-white z-[101] sm:w-[95%] relative"
       >
         <div className="flex items-center justify-between">
           <NavLink to="/" href="" className="font-bold text-xl">
@@ -82,8 +88,11 @@ const Navbar = () => {
                 <a> {item.title}</a>
               </Link>
             ))}
-            <button className="px-8 py-3 bg-white rounded-full text-black font-semibold">
-              Rgister
+            <button
+              className="px-8 py-3 bg-white rounded-full text-black font-semibold"
+              onClick={modalOpen}
+            >
+              Register
             </button>
           </div>
 
