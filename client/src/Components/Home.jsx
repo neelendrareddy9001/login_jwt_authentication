@@ -5,9 +5,12 @@ import { ThemeContext } from "../context/themeContext";
 const Home = () => {
   const { theme, setTheme } = useContext(ThemeContext);
   return (
-    <div>
+    <>
       <Navbar />
-    </div>
+      <div className="w-full px-8">
+        <h1>Hello</h1>
+      </div>
+    </>
   );
 };
 

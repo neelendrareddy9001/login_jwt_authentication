@@ -1,12 +1,13 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
 
-const Projects = () => {
+const Services = () => {
   return (
     <>
       <Navbar />
+      <h1>Our Services</h1>
     </>
   );
 };
 
-export default Projects;
+export default Services;

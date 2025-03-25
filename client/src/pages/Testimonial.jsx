@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
 
-const Cv = () => {
+const Testimonials = () => {
   return (
     <>
       <Navbar />
@@ -9,4 +9,4 @@ const Cv = () => {
   );
 };
 
-export default Cv;
+export default Testimonials;
