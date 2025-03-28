@@ -7,8 +7,18 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="w-full px-8">
-        <h1>Hello</h1>
+      <div className="flex gap-[20%] bg-red-500 px-[4vw] p-24 min-h-svh">
+        <div className="w-1/2">
+          <h1>Test your knowledge with us</h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab ad
+            rerum tempora suscipit inventore quae dolores, asperiores vitae et
+            obcaecati.
+          </p>
+        </div>
+        <div>
+          <h4>good mornig</h4>
+        </div>
       </div>
     </>
   );
