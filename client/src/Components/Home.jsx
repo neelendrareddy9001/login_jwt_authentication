@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="flex gap-[20%] bg-red-500 px-[4vw] p-24 min-h-svh">
+      <div className="flex gap-[20%] bg-red-500 px-[4vw] p-24 h-full">
         <div className="w-1/2">
           <h1>Test your knowledge with us</h1>
           <p>

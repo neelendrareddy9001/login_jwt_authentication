@@ -37,7 +37,7 @@ const navlinks = [
 ];
 
 const Navbar = () => {
-  const [modal, setModal] = useState(true);
+  const [modal, setModal] = useState(false);
   const { pages } = useContext(NavigateContect);
   const [isOpen, setIsOpen] = useState(false);
   const [hidden, setIsHidden] = useState(false);
@@ -74,7 +74,7 @@ const Navbar = () => {
         transition={{ duration: 0.35, ease: "easeInOut" }}
         className=" bg-black lg:w-[55%] mx-auto py-4 px-[4vw] w-[100%] md:w-[75%] text-white z-[101] sm:w-[95%] relative"
       >
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between relative">
           <NavLink to="/" href="" className="font-bold text-xl">
             Navbar
           </NavLink>
