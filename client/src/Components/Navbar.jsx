@@ -32,7 +32,7 @@ const navlinks = [
   {
     id: 5,
     href: "/contact",
-    title: "CONTACT",
+    title: "Contact",
   },
 ];
 
