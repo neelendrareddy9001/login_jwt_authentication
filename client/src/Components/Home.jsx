@@ -7,15 +7,19 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="flex gap-[20%] bg-red-500 px-[4vw] p-24 h-full">
-        <div className="w-1/2">
-          <h1>Test your knowledge with us</h1>
-          <p>
+      <div className="flex gap-[20%] bg-red-500 px-[4vw] p-24">
+        <div>
+          <h1 className="lgg:text-5xl mdd:text-4xl smm:text-3xl text-xl-semibold mb-[1.25rem]">
+            Test your knowledge with us
+          </h1>
+          <p className="max-w-lg">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab ad
             rerum tempora suscipit inventore quae dolores, asperiores vitae et
             obcaecati.
           </p>
+          <div className="bns"></div>
         </div>
+
         <div>
           <h4>good mornig</h4>
         </div>
