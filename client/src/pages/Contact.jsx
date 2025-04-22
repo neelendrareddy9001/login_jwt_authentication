@@ -5,8 +5,8 @@ const Contact = () => {
   return (
     <>
       <Navbar />
-      <div className="section-container bg-blue-500 max-w-md mx-auto rounded-xl p-8 mt-20">
-        <h1 className="text-center font-semibold mb-4 text-xl">Contact Us</h1>
+      <div className="section-container bg-blue-500 mx-auto rounded-xl p-4 mt-20">
+        <h1 className="text-center font-semibold mb-4 text-3xl">Contact Us</h1>
 
         <form>
           <div className="input-container">

@@ -7,8 +7,8 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="flex gap-[20%] bg-red-500 px-[4vw] p-24">
-        <div>
+      <div className="flex flex-col gap-3 bg-red-500 px-[4vw] p-24 h-screen">
+        <div className="h-full">
           <h1 className="lgg:text-5xl mdd:text-4xl smm:text-3xl text-xl-semibold mb-[1.25rem]">
             Test your knowledge with us
           </h1>
