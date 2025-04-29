@@ -10,9 +10,9 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col gap-3 bg-red-500 px-[4vw] p-24 h-[89vh] lgg:flex-row lgg:gap-[20%]">
+      <div className="flex flex-col gap-3 bg-pink-100 px-[4vw] p-24 h-[89vh] lgg:flex-row lgg:gap-[20%]">
         <div className="h-full">
-          <h1 className="lgg:text-5xl mdd:text-4xl smm:text-3xl text-xl-semibold mb-[1.25rem] max-w-md">
+          <h1 className="lgg:text-5xl mdd:text-4xl smm:text-3xl text-bold mb-[1.25rem] max-w-md">
             Test your knowledge with us
           </h1>
           <p className="max-w-lg">
@@ -20,16 +20,16 @@ const Home = () => {
             rerum tempora suscipit inventore quae dolores, asperiores vitae et
             obcaecati.
           </p>
-          <div className="btns mt-8">
-            <button className="px-8 py-3 bg-black text-white rounded-lg font-semibold">
+          <div className="btns mt-8 flex flex-col gap-4 mdd:flex-row">
+            <button className=" py-3 px-4 bg-black text-white rounded-lg font-semibold mdd:w-[40%]">
               Downalod
             </button>
-            <button className="px-8 py-3 bg-black text-white rounded-lg font-semibold ml-6">
+            <button className="px-4 py-3 bg-black text-white rounded-lg font-semibold mdd:w-[40%]">
               Know More
             </button>
           </div>
 
-          <div className="icons my-[10%] flex px-8 mx-auto gap-8">
+          <div className="icons my-[10%] flex items-center px-16 gap-8  m-auto justify-content-around space-x-4">
             <FaFacebook size={24} />
             <FaInstagram size={24} />
             <FaTwitter size={24} />

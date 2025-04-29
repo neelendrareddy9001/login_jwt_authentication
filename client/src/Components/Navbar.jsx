@@ -72,7 +72,7 @@ const Navbar = () => {
         }}
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.35, ease: "easeInOut" }}
-        className=" bg-black mx-auto py-4 px-16 lgg:px-[8vw] w-[100%] text-white z-[101] relative"
+        className=" bg-black mx-auto py-4 px-4 lgg:px-[8vw] w-[100%] text-white z-[101] relative"
       >
         <div className="flex items-center justify-between relative">
           <NavLink to="/" href="" className="font-bold text-xl">
