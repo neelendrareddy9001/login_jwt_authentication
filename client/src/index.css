@@ -27,6 +27,9 @@ body{
     .back_main{
         @apply absolute right-3 bottom-3 w-12 h-12 text-center rounded-full bg-black text-white
     }
+    .navBar {
+        @apply px-2 mdd:px-6
+    }
 }
 
 

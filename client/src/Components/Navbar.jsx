@@ -74,7 +74,7 @@ const Navbar = () => {
         transition={{ duration: 0.35, ease: "easeInOut" }}
         className=" bg-black mx-auto py-4 px-4 lgg:px-[8vw] w-[100%] text-white z-[101] relative"
       >
-        <div className="flex items-center justify-between relative">
+        <div className="flex items-center justify-between relative navBar">
           <NavLink to="/" href="" className="font-bold text-xl">
             Navbar
           </NavLink>
@@ -112,8 +112,8 @@ const Navbar = () => {
         </div>
       </motion.nav>
       {isOpen && (
-        <div className=" bg-black  w-[60%] md:w-[50%] fixed top-[48px] left-[22%] lg:w-[55%] mx-auto rounded-xl mt-20 lg:hidden shadow-xl duration-150">
-          <div className="flex text-white flex-col gap-8 text-center p-[2rem]">
+        <div className=" bg-black  w-[60%] md:w-[50%] fixed top-[-20px] right-0 lg:w-[55%] h-full mx-auto rounded-sm mt-20 lg:hidden shadow-xl duration-150">
+          <div className="flex text-white flex-col gap-4 text-center p-[2rem]">
             {navlinks.map((item) => (
               <Link
                 className="cursor-pointer links"
