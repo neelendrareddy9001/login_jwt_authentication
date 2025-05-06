@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col gap-3 bg-pink-100 px-[4vw] p-24 h-[89vh] lgg:flex-row lgg:gap-[20%]">
+      <div className="flex flex-col gap-3 bg-pink-100 px-[4vw] p-24 lgg:px-[8vw] h-[89vh] lgg:flex-row lgg:gap-[20%]">
         <div className="h-full">
           <h1 className="lgg:text-5xl mdd:text-4xl smm:text-3xl text-bold mb-[1.25rem] max-w-md">
             Test your knowledge with us
