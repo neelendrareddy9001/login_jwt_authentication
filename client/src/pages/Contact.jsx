@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <>
       <Navbar />
-      <div className="section-container bg-blue-500 mx-auto rounded-xl p-4 mt-20">
+      <section className="section-container px-4 smm:px-6 mdd:px-9 lgg:px-12">
         <h1 className="text-center font-semibold mb-4 text-3xl">Contact Us</h1>
 
         <form>
@@ -64,7 +64,7 @@ const Contact = () => {
             Register
           </button>
         </form>
-      </div>
+      </section>
     </>
   );
 };

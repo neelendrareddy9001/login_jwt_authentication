@@ -6,9 +6,9 @@ const About = () => {
   return (
     <>
       <Navbar />
-      <div className="section-container">
+      <section className="my-6 px-4 smm:px-6 mdd:px-9 lgg:px-12">
         <h2>About</h2>
-      </div>
+      </section>
     </>
   );
 };
