@@ -7,7 +7,9 @@ const Contact = () => {
     <>
       <Navbar />
       <section className="section-container mx-auto px-4 smm:px-6 mdd:px-9 lgg:px-12">
-        <h1 className="text-center font-semibold mb-4 text-3xl">Contact Us</h1>
+        <h1 className="text-center font-semibold mb-4 text-3xl py-4">
+          Contact Us
+        </h1>
 
         <div className="flex w-[100%] gap-4 mt-16 flex-col smm:flex-row">
           <form className=" px-8 shadow-xl w-full rounded-md py-9 smm:w-[60%]">
@@ -65,7 +67,7 @@ const Contact = () => {
                 />
               </div>
             </div>
-            <button className="px-8 py-2 bg-green-400 rounded-md text-white mt-[1rem]">
+            <button className="px-8 py-2 bg-green-400 rounded-md text-black mt-[1rem] hover:bg-green-700 hover:text-white transition-all ease-in-out">
               Register
             </button>
           </form>
