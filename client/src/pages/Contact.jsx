@@ -6,11 +6,11 @@ const Contact = () => {
   return (
     <>
       <Navbar />
-      <section className="section-container px-4 smm:px-6 mdd:px-9 lgg:px-12">
+      <section className="section-container mx-auto px-4 smm:px-6 mdd:px-9 lgg:px-12">
         <h1 className="text-center font-semibold mb-4 text-3xl">Contact Us</h1>
 
-        <div className="flex w-[100%]">
-          <form className="w-full">
+        <div className="flex w-[100%] gap-4 mt-16 flex-col smm:flex-row">
+          <form className=" px-8 shadow-xl w-full rounded-md py-9 smm:w-[60%]">
             <div className="input-container">
               <div className="flex flex-col ">
                 <label
@@ -70,7 +70,11 @@ const Contact = () => {
             </button>
           </form>
           <div className="contactImg">
-            <img src={contactBanner} alt="contact" />
+            <img
+              src={contactBanner}
+              alt="contact"
+              style={{ width: "600px", height: "400px" }}
+            />
           </div>
         </div>
       </section>
