@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
+import TestimonialCard from "../utils/TestimonialCard";
 
 const Testimonials = () => {
   return (
@@ -10,6 +11,9 @@ const Testimonials = () => {
         <p className="text-center text-sm text-gray-600">
           Our client from all over the world
         </p>
+        <div className="my-14">
+          <TestimonialCard />
+        </div>
       </section>
     </>
   );
