@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
+import ServiceCard from "../utils/ServiceCard";
 
 const Services = () => {
   return (
@@ -10,6 +11,7 @@ const Services = () => {
         <p className="text-center text-sm text-gray-600">
           We provide uniqu type of services to satisfy the customers
         </p>
+        <ServiceCard />
       </section>
     </>
   );
