@@ -30,6 +30,9 @@ body{
     .navBar {
         @apply px-2 mdd:px-6
     }
+    .serviceCard {
+        @apply bg-black text-white w-32 h-32 rounded-md
+    }
 }
 
 
